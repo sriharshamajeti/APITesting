@@ -11,4 +11,8 @@ public class AuthService extends BaseService{
     public Response login(LoginRequest payLoad) {
         return postRequest(payLoad, BASE_PATH + "login");
     }
+
+    public Response signUp(SignUpRequest payLoad) {
+        return postRequest(payLoad, BASE_PATH + "signup");
+    }
 }
