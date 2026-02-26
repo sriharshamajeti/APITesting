@@ -12,7 +12,7 @@ public class BaseService {//Wrapper for the RestAssured
     // Creating the request
     //Handling the response
 
-    private static final String BASE_URL = "baseURL";
+    private static final String BASE_URL = "BASE_URL";
 
     private RequestSpecification requestSpecification;
 
@@ -22,6 +22,10 @@ public class BaseService {//Wrapper for the RestAssured
 
     protected Response postRequest(Object payLoad, String endpoint) {
         return requestSpecification.contentType(ContentType.JSON).body(payLoad).post(endpoint);
+    }
+
+    protected Response getRequest(String endpoint) {
+        return requestSpecification.get(endpoint);
     }
 
 }

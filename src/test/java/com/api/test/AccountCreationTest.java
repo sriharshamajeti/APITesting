@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AccountCreationTest {
-    @Test(description = "Verify if Login API is working")
+    @Test(description = "Verify if Account Creation API is working")
 
     public void createAccountTest() {
 
