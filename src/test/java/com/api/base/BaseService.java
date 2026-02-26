@@ -12,7 +12,7 @@ public class BaseService {//Wrapper for the RestAssured
     // Creating the request
     //Handling the response
 
-    private static final String BASE_URL = "BASE_URL";
+    private static final String BASE_URL = "http://64.227.160.186:8080";
 
     private RequestSpecification requestSpecification;
 
@@ -26,6 +26,10 @@ public class BaseService {//Wrapper for the RestAssured
 
     protected Response getRequest(String endpoint) {
         return requestSpecification.get(endpoint);
+    }
+
+    protected void setAuthToken(String token) {
+        requestSpecification.header("Authorization", "Bearer " + token);
     }
 
 }
