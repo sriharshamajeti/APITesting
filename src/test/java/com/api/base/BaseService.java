@@ -24,5 +24,4 @@ public class BaseService {//Wrapper for the RestAssured
         return requestSpecification.contentType(ContentType.JSON).body(payLoad).post(endpoint);
     }
 
-
 }
