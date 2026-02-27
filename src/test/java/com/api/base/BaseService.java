@@ -32,4 +32,8 @@ public class BaseService {//Wrapper for the RestAssured
         requestSpecification.header("Authorization", "Bearer " + token);
     }
 
+    protected Response putRequest(Object payLoad, String endpoint) {
+        return requestSpecification.contentType(ContentType.JSON).body(payLoad).put(endpoint);
+    }
+
 }
